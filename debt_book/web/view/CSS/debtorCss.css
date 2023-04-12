@@ -1,0 +1,304 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 25, 2023, 5:21:57 PM
+    Author     : dell
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url(../ASSESTS/IMG/89.jpg) center / cover;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    box-shadow: 0 .4rem .8rem #0005;
+}
+
+.action {
+    text-align: center;   
+}
+
+main.table{
+    width: 95vw;
+    height: 80%;
+    background-color: #fff5;
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+table{
+    width: 100%;
+/*    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.table_header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+/*    position: relative;*/
+}
+
+a[href="add-debtor"]{
+    text-decoration: none;
+    text-align: center;
+    
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 70%;
+    
+    position: relative;
+    
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    color: #fff;
+}
+
+.table_body {
+    width: 95%;
+    max-height: calc(89% - .8rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+thread th{
+    position: sticky;
+    top: 0;
+    background-color: #d5d1defe;
+    
+}
+
+tbody tr:nth-child(even){
+    background-color: #0000000b;
+}
+
+tbody tr:hover{
+    background-color: #f8edeb;
+}
+
+.debt {
+    background-color: #059862;
+    color: #ffff;
+    padding: .4rem 0;
+    /* margin: 0rem 1rem; */
+    border-left: 20px solid #059862;
+    border-right: 20px solid #059862;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 1000px){
+    td:not(:first-of-type){
+        min-width: 12.1rem;
+    }
+}
+
+.table_foot {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+    
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    box-sizing: border-box;
+
+}
+
+/* input number */
+input[type="number"]{
+    background: #fff;
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    position: relative;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover{
+    background: #059862;
+    color: #fff;
+}
+
+/* input text */
+input[type="text"]{
+    background: #fff;
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+/* input date */
+input[type="date"]{
+    background: #fff;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+/* select records */
+select {
+    background: #fff;
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+/* botton filter */
+button[type="submit"]{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f4a261;
+    border: 1px solid #f4a261;
+    color: #fff;
+    transition: 0.5s;
+}
+button[type="submit"]:hover{
+    background: #fff6ff;
+    color: #370617;
+}
+
+/* Chi tiet */
+button[type="hidden"]{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #ef476f;
+    border: 1px solid #ef476f;
+    color: #fff;
+    transition: 1s;
+}
+button[type="hidden"]:hover{
+    font-size: 20px;
+    
+}
+
+/* Them phieu no  button [type="button"]*/
+a{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #06d6a0;
+    border: 1px solid #06d6a0;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
